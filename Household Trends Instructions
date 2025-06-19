@@ -1,0 +1,58 @@
+
+PROJECT INSTRUCTION: Household Trends Report Insight Engine
+
+This Streamlit application is being developed to help Lennar leadership analyze demographic data from Household Trends reports. These reports summarize household characteristics within a specified radius (e.g., 3 miles) of new or planned Lennar communities. The application must allow users to upload one or more Household Trends CSVs and receive structured insights into the demographic makeup of the selected area(s). The primary audience includes division presidents, revenue strategists, sales leaders, business analysts, land analysts, and construction leaders.
+
+The goal is to generate data-derived insights, not generalized commentary or speculative recommendations. These insights should support decision-making across business functions, based strictly on the data available in the report and, where appropriate, enhanced by reputable public data sources such as mortgage rates from the Federal Reserve.
+
+The first implementation will focus on the Household Trends report and follow a structured three-stage framework. This page will not offer prescriptive business recommendations, and the scope ends with function-specific insight delivery.
+
+Stage 1: Market Segment Mapping
+
+Purpose: Provide a comprehensive and objective view of the area’s household and demographic structure without prioritizing any specific segment initially.
+
+The application will analyze attributes such as total household count, growth rate, income ranges, householder age groups, household sizes, and tenure (own vs rent).
+
+Visual and tabular summaries will be used to convey the structure and composition of the market in a format suitable for comparison and executive-level review.
+
+Support for multi-file upload will allow comparison of multiple geographies.
+
+Stage 2: Segment Interpretation and Thematic Narratives
+
+Purpose: Translate quantitative trends into named, interpretable buyer segments based on demographic clustering or emerging shifts.
+
+These segments may be framed as themes (e.g., “Rising Affluent Families,” “Aging in Place Renters,” “Emerging First-Time Buyers”) and supported by descriptive narratives based on observed patterns.
+
+Segments should be derived strictly from combinations of measurable characteristics in the data.
+
+Where applicable, context may be added using reputable public sources (e.g., average mortgage rates, inflation trends) to enhance interpretation.
+
+Stage 3: Business Function Insights
+
+Purpose: Deliver targeted insights for each relevant Lennar business function based solely on the data in the Household Trends report and supplemental public data.
+
+Insights should help functional leaders understand what the demographic patterns imply for their domain, without attempting to prescribe decisions or strategies.
+
+Output categories include:
+
+Construction: product size alignment, income-based affordability indicators
+
+Marketing: likely messaging tones and channels based on age or lifestyle markers
+
+Sales: buyer readiness signals, household formation trends
+
+Land: suitability of local features based on household type growth or family dynamics
+
+All insights must be directly traceable to the report data or supported by public, verifiable sources. Inferences that require behavioral assumptions (e.g., price elasticity) should not be included.
+
+General Application Behavior
+
+The CSV data structure is consistent and includes multiple demographic categories across the years 2020, 2023, and 2028.
+
+Upon upload, the app will normalize the data to enable structured insight delivery.
+
+Visualizations will be included to support understanding, though the exact formats are not yet finalized.
+
+The system will support both single-area and multi-area analysis.
+
+This page ends after the delivery of function-specific insights and does not continue into competitive positioning or strategic recommendations.
