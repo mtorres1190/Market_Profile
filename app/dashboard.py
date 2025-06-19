@@ -68,8 +68,8 @@ for key in ["ht_file", "household_data", "cs_file", "consumer_data"]:
 if AUTO_UPLOAD:
     import os
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    ht_path = os.path.join(BASE_DIR, "..", "data", "dev", "HouseholdTrends - Developer.csv")
-    cs_path = os.path.join(BASE_DIR, "..", "data", "dev", "ConsumerSegmentation - Developer.csv")
+    ht_path = os.path.join(BASE_DIR, "..", "data", "uploads", "HouseholdTrends - Developer.csv")
+    cs_path = os.path.join(BASE_DIR, "..", "data", "uploads", "ConsumerSegmentation - Developer.csv")
     with open(ht_path, "r") as ht_f:
         import io
         st.session_state.ht_file = ht_f.read()
