@@ -70,10 +70,14 @@ if AUTO_UPLOAD:
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     ht_path = os.path.join(BASE_DIR, "..", "data", "dev", "HouseholdTrends - Developer.csv")
     cs_path = os.path.join(BASE_DIR, "..", "data", "dev", "ConsumerSegmentation - Developer.csv")
-    st.session_state.ht_file = open(ht_path, "r")
-    st.session_state.cs_file = open(cs_path, "r")
-    st.session_state.household_data = parse_household_trends(st.session_state.ht_file)
-    st.session_state.consumer_data = pd.read_csv(st.session_state.cs_file)
+    with open(ht_path, "r") as ht_f:
+        import io
+        st.session_state.ht_file = ht_f.read()
+        st.session_state.household_data = parse_household_trends(pd.read_csv(io.StringIO(st.session_state.ht_file)))
+    with open(cs_path, "r") as cs_f:
+        import io
+        st.session_state.cs_file = cs_f.read()
+        st.session_state.consumer_data = pd.read_csv(io.StringIO(st.session_state.cs_file))
 else:
     col1, col2 = st.columns(2)
     with col1:
@@ -103,6 +107,7 @@ else:
             st.session_state.consumer_data = pd.read_csv(cs_input)
         else:
             st.error("❌ Invalid Consumer Segmentation file format.")
+
 
 valid = (
     st.session_state.get("ht_file") is not None
