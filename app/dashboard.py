@@ -66,8 +66,10 @@ for key in ["ht_file", "household_data", "cs_file", "consumer_data"]:
 
 # Auto-load files in developer mode
 if AUTO_UPLOAD:
-    ht_path = "C:/Users/MiTorres/OneDrive - Lennar Azure AD/Files/Other Projects/Demographics/data/uploads/HouseholdTrends - Developer.csv"
-    cs_path = "C:/Users/MiTorres/OneDrive - Lennar Azure AD/Files/Other Projects/Demographics/data/uploads/ConsumerSegmentation - Developer.csv"
+    import os
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    ht_path = os.path.join(BASE_DIR, "..", "data", "dev", "HouseholdTrends - Developer.csv")
+    cs_path = os.path.join(BASE_DIR, "..", "data", "dev", "ConsumerSegmentation - Developer.csv")
     st.session_state.ht_file = open(ht_path, "r")
     st.session_state.cs_file = open(cs_path, "r")
     st.session_state.household_data = parse_household_trends(st.session_state.ht_file)
