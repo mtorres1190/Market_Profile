@@ -6,7 +6,7 @@ import os
 
 # 🛠 Developer Mode (set to False to enable auto-loading of test files and disable firewall)
 AUTO_UPLOAD = True  # Enable to auto-load dev files
-ENABLE_FIREWALL = True  # Enable to require access code
+ENABLE_FIREWALL = False  # Enable to require access code
 
 
 # Set your 4-digit access code
@@ -908,4 +908,4 @@ if valid and household_data is not None and isinstance(household_data, dict):
 
 # To run the Streamlit App
 # streamlit run "C:\\Users\\MiTorres\\OneDrive - Lennar Azure AD\\Files\\Other Projects\\Demographics\\app\\dashboard.py"
-
+# https://market-profile.streamlit.app/
