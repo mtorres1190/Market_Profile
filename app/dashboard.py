@@ -70,14 +70,16 @@ if AUTO_UPLOAD:
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     ht_path = os.path.join(BASE_DIR, "..", "data", "uploads", "HouseholdTrends - Developer.csv")
     cs_path = os.path.join(BASE_DIR, "..", "data", "uploads", "ConsumerSegmentation - Developer.csv")
-    with open(ht_path, "r") as ht_f:
-        import io
+    import io
+    with open(ht_path, "r", encoding="utf-8") as ht_f:
         st.session_state.ht_file = ht_f.read()
-        st.session_state.household_data = parse_household_trends(pd.read_csv(io.StringIO(st.session_state.ht_file)))
-    with open(cs_path, "r") as cs_f:
-        import io
+        ht_buffer = io.StringIO(st.session_state.ht_file)
+        st.session_state.household_data = parse_household_trends(ht_buffer)
+    import io
+    with open(cs_path, "r", encoding="utf-8") as cs_f:
         st.session_state.cs_file = cs_f.read()
-        st.session_state.consumer_data = pd.read_csv(io.StringIO(st.session_state.cs_file))
+        cs_buffer = io.StringIO(st.session_state.cs_file)
+        st.session_state.consumer_data = pd.read_csv(cs_buffer)
 else:
     col1, col2 = st.columns(2)
     with col1:
