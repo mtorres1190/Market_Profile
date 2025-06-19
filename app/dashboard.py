@@ -5,7 +5,7 @@ import sys
 import os
 
 # 🛠 Developer Mode (set to False to enable auto-loading of test files and disable firewall)
-AUTO_UPLOAD = True  # Enable to auto-load dev files
+AUTO_UPLOAD = False  # Enable to auto-load dev files
 ENABLE_FIREWALL = True  # Enable to require access code
 
 
