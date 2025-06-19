@@ -37,7 +37,7 @@ from segment_definitions import segment_descriptions
 from utils.mortgage_config import MORTGAGE_RATE
 
 st.set_page_config(page_title="Dashboard", layout="wide")
-st.markdown("<h1 style='margin-bottom: 0.5rem;'>Market Overview Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='margin-bottom: 0.5rem;'>Market Profile Dashboard</h1>", unsafe_allow_html=True)
 
 REQUIRED_HT_COLUMNS = {'Demographic', '2020', '% OF TOTAL', '2023', '% OF TOTAL', '2028', '% OF TOTAL'}
 REQUIRED_CS_COLUMNS = {'RANK', 'Name', '# 0F HOUSEHOLDS', '% OF TOTAL'}
