@@ -1,69 +1,69 @@
-Demographic,2020,% OF TOTAL,2023,% OF TOTAL,2028,% OF TOTAL
-Households,57277,-,62271,-,67656,-
-Households Growth,-,-,8.7%,-,8.6%,-
-Householder Age 15-24,1538,2.7%,1700,2.7%,1868,2.8%
-Householder Age 25-34,9486,16.6%,10581,17.0%,10859,16.1%
-Householder Age 35-44,13634,23.8%,15032,24.1%,16525,24.4%
-Householder Age 45-54,12163,21.2%,13203,21.2%,14306,21.1%
-Householder Age 55-64,10618,18.5%,11297,18.1%,11546,17.1%
-Householder Age 65-74,6386,11.1%,6783,10.9%,7887,11.7%
-Householder Age 75+,3452,6.0%,3675,5.9%,4665,6.9%
-Average Household Size,3.2,-,3.3,-,3.5,-
-1 Person Households,8563,15.0%,8070,13.0%,7222,10.7%
-2 Person Households,14849,25.9%,14340,23.0%,13721,20.3%
-3 Person Households,10849,18.9%,11048,17.7%,11226,16.6%
-4 Person Households,10930,19.1%,14062,22.6%,17643,26.1%
-5 Person Households,6699,11.7%,8277,13.3%,10091,14.9%
-6 Person Households,3303,5.8%,3983,6.4%,4771,7.1%
-7+ Person Households,2084,3.6%,2491,4.0%,2982,4.4%
-Household Type: Family,46497,81.2%,50552,81.2%,-,-
-Household Type: Married Family,32680,57.1%,35629,57.2%,-,-
-Household Type: Married Family With Children,16628,29.0%,18351,29.5%,-,-
-Household Type: Married Family Without Children,16052,28.0%,17278,27.7%,-,-
-Household Type: Other Family,13817,24.1%,14923,24.0%,-,-
-"Household Type: Male Households, No Wife",4007,7.0%,4295,6.9%,-,-
-"Household Type: Male Households, No Wife With Children",2052,3.6%,2232,3.6%,-,-
-"Household Type: Male Households, No Wife Without Children",1955,3.4%,2063,3.3%,-,-
-"Household Type: Female Households, No Husband",9810,17.1%,10628,17.1%,-,-
-"Household Type: Female Households, No Husband With Children",5572,9.7%,6104,9.8%,-,-
-"Household Type: Female Households, No Husband Without Children",4238,7.4%,4524,7.3%,-,-
-Household Income: Average,94675,-,98714,-,123378,-
-Household Income: Median,72595,-,80102,-,100101,-
-Household Income: Less than $25k,7158,12.5%,7778,12.5%,5923,8.8%
-Household Income: $25k - $50k,10796,18.8%,10924,17.5%,9116,13.5%
-Household Income: $50k - $75k,11445,20.0%,11763,18.9%,10919,16.1%
-Household Income: $75k - $100k,7522,13.1%,9183,14.7%,9652,14.3%
-Household Income: $100k - $125k,7017,12.3%,7952,12.8%,8267,12.2%
-Household Income: $125k - $150k,5337,9.3%,5967,9.6%,7756,11.5%
-Household Income: $150k - $200k,4430,7.7%,4851,7.8%,8460,12.5%
-Household Income: Above $200k,3572,6.2%,3853,6.2%,7563,11.2%
-Total Housing Units,59967,-,-,-,-,-
-Owner Occupied Housing Units,43262,72.1%,47092,-,-,-
-Renter Occupied Housing Units,14015,23.4%,15179,-,-,-
-Vacant Housing Units,2690,4.5%,-,-,-,-
-Vacant Housing Units: Seasonal,64,0.1%,-,-,-,-
-Vacant Housing Units: Other Usage,2626,4.4%,-,-,-,-
-Average Housing Unit Value,211693,-,211674,-,-,-
-Median Housing Unit Value,200189,-,200154,-,-,-
-Housing Unit Value Less Than $100k,6695,15.5%,6967,14.8%,-,-
-Housing Unit Value $100k-$200k,13049,30.2%,13686,29.1%,-,-
-Housing Unit Value $200k-$250k,8655,20.0%,9676,20.5%,-,-
-Housing Unit Value $250k-$300k,6216,14.4%,7156,15.2%,-,-
-Housing Unit Value $300k-$400k,5971,13.8%,6763,14.4%,-,-
-Housing Unit Value $400k-$500k,1410,3.3%,1498,3.2%,-,-
-Housing Unit Value $500k-$750k,775,1.8%,845,1.8%,-,-
-Housing Unit Value $750k-$1m,369,0.9%,371,0.8%,-,-
-Housing Unit Value $1m-$1.5m,12,0.0%,12,0.0%,-,-
-Housing Unit Value $1.5m-$2m,38,0.1%,37,0.1%,-,-
-Housing Unit Value Above $2m,72,0.2%,81,0.2%,-,-
-Median Housing Unit Year Built,1996,-,1996,-,-,-
-Housing Units Built 2014 Or After,390,0.7%,490,0.8%,-,-
-Housing Units Built 2010-2013,12731,22.2%,15396,24.7%,-,-
-Housing Units Built 2000-2009,16704,29.2%,18491,29.7%,-,-
-Housing Units Built 1990-1999,9715,17.0%,9839,15.8%,-,-
-Housing Units Built 1980-1989,7725,13.5%,7893,12.7%,-,-
-Housing Units Built 1970-1979,4596,8.0%,4648,7.5%,-,-
-Housing Units Built 1960-1969,2575,4.5%,2619,4.2%,-,-
-Housing Units Built 1950-1959,1656,2.9%,1709,2.7%,-,-
-Housing Units Built 1940-1949,700,1.2%,698,1.1%,-,-
-Housing Units Built Before 1940,485,0.8%,488,0.8%,-,-
+Demographic,2020,% OF TOTAL,2024,% OF TOTAL,2029,% OF TOTAL
+Households,8085,-,9943,-,12780,-
+Households Growth,-,-,23.00%,-,28.50%,-
+Householder Age 15-24,207,2.60%,261,2.60%,383,3.00%
+Householder Age 25-34,1166,14.40%,1513,15.20%,1925,15.10%
+Householder Age 35-44,1472,18.20%,1873,18.80%,2508,19.60%
+Householder Age 45-54,1554,19.20%,1923,19.30%,2477,19.40%
+Householder Age 55-64,1722,21.30%,2071,20.80%,2399,18.80%
+Householder Age 65-74,1204,14.90%,1422,14.30%,1823,14.30%
+Householder Age 75+,760,9.40%,880,8.90%,1265,9.90%
+Average Household Size,2.7,-,2.7,-,2.7,-
+1 Person Households,1481,18.30%,1843,18.50%,2355,18.40%
+2 Person Households,2864,35.40%,3523,35.40%,4491,35.10%
+3 Person Households,1376,17.00%,1759,17.70%,2321,18.20%
+4 Person Households,1268,15.70%,1509,15.20%,1929,15.10%
+5 Person Households,663,8.20%,799,8.00%,1029,8.10%
+6 Person Households,254,3.10%,307,3.10%,400,3.10%
+7+ Person Households,179,2.20%,203,2.00%,255,2.00%
+Household Type: Family,6181,76.50%,7643,76.90%,-,-
+Household Type: Married Family,4966,61.40%,6140,61.80%,-,-
+Household Type: Married Family With Children,1895,23.40%,2405,24.20%,-,-
+Household Type: Married Family Without Children,3071,38.00%,3735,37.60%,-,-
+Household Type: Other Family,1215,15.00%,1503,15.10%,-,-
+"Household Type: Male Households, No Wife",425,5.30%,528,5.30%,-,-
+"Household Type: Male Households, No Wife With Children",216,2.70%,266,2.70%,-,-
+"Household Type: Male Households, No Wife Without Children",209,2.60%,262,2.60%,-,-
+"Household Type: Female Households, No Husband",790,9.80%,975,9.80%,-,-
+"Household Type: Female Households, No Husband With Children",380,4.70%,476,4.80%,-,-
+"Household Type: Female Households, No Husband Without Children",410,5.10%,499,5.00%,-,-
+Household Income: Average,129040,-,143149,-,171999,-
+Household Income: Median,0,-,126731,-,143626,-
+Household Income: Less than $25k,662,8.20%,643,6.50%,728,5.70%
+Household Income: $25k - $50k,1079,13.30%,1140,11.50%,1089,8.50%
+Household Income: $50k - $75k,1117,13.80%,1333,13.40%,1361,10.60%
+Household Income: $75k - $100k,1229,15.20%,1573,15.80%,1620,12.70%
+Household Income: $100k - $125k,753,9.30%,859,8.60%,987,7.70%
+Household Income: $125k - $150k,932,11.50%,1203,12.10%,1342,10.50%
+Household Income: $150k - $200k,1274,15.80%,1499,15.10%,2263,17.70%
+Household Income: Above $200k,1039,12.90%,1693,17.00%,3390,26.50%
+Total Housing Units,8774,-,-,-,-,-
+Owner Occupied Housing Units,6378,72.70%,7804,-,-,-
+Renter Occupied Housing Units,1707,19.50%,2139,-,-,-
+Vacant Housing Units,689,7.90%,-,-,-,-
+Vacant Housing Units: Seasonal,112,1.30%,-,-,-,-
+Vacant Housing Units: Other Usage,577,6.60%,-,-,-,-
+Average Housing Unit Value,397143,-,397087,-,-,-
+Median Housing Unit Value,340161,-,340189,-,-,-
+Housing Unit Value Less Than $100k,365,5.70%,421,5.40%,-,-
+Housing Unit Value $100k-$200k,939,14.70%,1138,14.60%,-,-
+Housing Unit Value $200k-$250k,699,11.00%,807,10.30%,-,-
+Housing Unit Value $250k-$300k,658,10.30%,855,11.00%,-,-
+Housing Unit Value $300k-$400k,1507,23.60%,1887,24.20%,-,-
+Housing Unit Value $400k-$500k,914,14.30%,1122,14.40%,-,-
+Housing Unit Value $500k-$750k,762,11.90%,976,12.50%,-,-
+Housing Unit Value $750k-$1m,380,6.00%,417,5.30%,-,-
+Housing Unit Value $1m-$1.5m,126,2.00%,151,1.90%,-,-
+Housing Unit Value $1.5m-$2m,6,0.10%,7,0.10%,-,-
+Housing Unit Value Above $2m,22,0.30%,23,0.30%,-,-
+Median Housing Unit Year Built,1998,-,1998,-,-,-
+Housing Units Built 2014 Or After,508,6.30%,767,7.70%,-,-
+Housing Units Built 2010-2013,1802,22.30%,2390,24.00%,-,-
+Housing Units Built 2000-2009,1930,23.90%,2276,22.90%,-,-
+Housing Units Built 1990-1999,1342,16.60%,1614,16.20%,-,-
+Housing Units Built 1980-1989,1108,13.70%,1288,13.00%,-,-
+Housing Units Built 1970-1979,473,5.90%,579,5.80%,-,-
+Housing Units Built 1960-1969,333,4.10%,375,3.80%,-,-
+Housing Units Built 1950-1959,136,1.70%,152,1.50%,-,-
+Housing Units Built 1940-1949,66,0.80%,72,0.70%,-,-
+Housing Units Built Before 1940,387,4.80%,430,4.30%,-,-
