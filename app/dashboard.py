@@ -138,8 +138,8 @@ if valid and household_data and 'total_households' in household_data:
 
     if len(total_df) >= 3:
         values = total_df['Households'].values
-        pct_2023 = ((values[1] - values[0]) / values[0]) * 100
-        pct_2028 = ((values[2] - values[1]) / values[1]) * 100
+        pct_2024 = ((values[1] - values[0]) / values[0]) * 100
+        pct_2029 = ((values[2] - values[1]) / values[1]) * 100
 
         def pct_label(pct):
             sign = "+" if pct >= 0 else "-"
@@ -178,11 +178,11 @@ if valid and household_data and 'total_households' in household_data:
                 y1=values[i],
                 line=dict(color="gray", width=1, dash="dash")
             )
-        fig.add_annotation(x=2023, y=values[1],
-            text=pct_label(pct_2023), showarrow=True, arrowhead=1, ax=0, ay=-40,
+        fig.add_annotation(x=2024, y=values[1],
+            text=pct_label(pct_2024), showarrow=True, arrowhead=1, ax=0, ay=-40,
             font=dict(size=18))
-        fig.add_annotation(x=2028, y=values[2],
-            text=pct_label(pct_2028), showarrow=True, arrowhead=1, ax=0, ay=-40,
+        fig.add_annotation(x=2029, y=values[2],
+            text=pct_label(pct_2029), showarrow=True, arrowhead=1, ax=0, ay=-40,
             font=dict(size=18))
         fig.update_layout(
             title="Households Growth",
@@ -199,7 +199,7 @@ if valid and household_data and 'total_households' in household_data:
 
         with viz2:
             tenure_df = household_data['tenure_distribution'].copy()
-            tenure_df = tenure_df[tenure_df['Year'].isin(['2020', '2023'])]
+            tenure_df = tenure_df[tenure_df['Year'].isin(['2020', '2024'])]
             tenure_df['Households'] = pd.to_numeric(tenure_df['Households'], errors='coerce')
 
             tenure_df['Tenure'] = tenure_df['Tenure'].replace({
@@ -207,7 +207,7 @@ if valid and household_data and 'total_households' in household_data:
                 'Renter Occupied Housing Units': 'Rent'
             })
 
-            outer = tenure_df[tenure_df['Year'] == '2023']
+            outer = tenure_df[tenure_df['Year'] == '2024']
             inner = tenure_df[tenure_df['Year'] == '2020']
 
             fig_nested = go.Figure()
@@ -231,9 +231,9 @@ if valid and household_data and 'total_households' in household_data:
             ))
 
             fig_nested.add_trace(go.Pie(
-                labels=[f"Own (2023)" if label == 'Own' else "Rent (2023)" for label in outer['Tenure']],
+                labels=[f"Own (2024)" if label == 'Own' else "Rent (2024" for label in outer['Tenure']],
                 values=outer['Households'],
-                name='2023',
+                name='2024',
                 hole=0.7,
                 direction='clockwise',
                 sort=False,
@@ -489,29 +489,29 @@ if valid and household_data is not None and isinstance(household_data, dict):
                     zero_point = pd.DataFrame({'x': [0], 'Households': [0]})
                     return pd.concat([zero_point, df_year], ignore_index=True)
 
-                income_df_2023 = prepare_income_df(income_df_all, '2023')
+                income_df_2024 = prepare_income_df(income_df_all, '2024')
                 income_df_2020 = prepare_income_df(income_df_all, '2020')
 
                 avg_row = household_data['income_metrics']['average']
                 med_row = household_data['income_metrics']['median']
 
-                avg_income = pd.to_numeric(avg_row[avg_row['Year'] == '2023']['AvgIncome'].values[0], errors='coerce') if not avg_row.empty else None
-                med_income = pd.to_numeric(med_row[med_row['Year'] == '2023']['MedianIncome'].values[0], errors='coerce') if not med_row.empty else None
+                avg_income = pd.to_numeric(avg_row[avg_row['Year'] == '2024']['AvgIncome'].values[0], errors='coerce') if not avg_row.empty else None
+                med_income = pd.to_numeric(med_row[med_row['Year'] == '2024']['MedianIncome'].values[0], errors='coerce') if not med_row.empty else None
 
-                max_y = max(income_df_2023['Households'].max(), income_df_2020['Households'].max()) * 1.1
+                max_y = max(income_df_2024['Households'].max(), income_df_2020['Households'].max()) * 1.1
                 max_x = 225000
                 income_ticks = list(range(0, max_x + 1, 50000)) + [225000]
 
                 fig_income = go.Figure()
 
                 fig_income.add_trace(go.Scatter(
-                    x=income_df_2023['x'],
-                    y=income_df_2023['Households'],
+                    x=income_df_2024['x'],
+                    y=income_df_2024['Households'],
                     fill='tozeroy',
                     mode='lines+markers',
                     line=dict(color='seagreen', shape='spline', smoothing=1.3),
-                    name='2023',
-                    hovertemplate='2023 Income: %{x:$,.0f}<br>Households: %{y:,}<extra></extra>'
+                    name='2024',
+                    hovertemplate='2024 Income: %{x:$,.0f}<br>Households: %{y:,}<extra></extra>'
                 ))
 
                 fig_income.add_trace(go.Scatter(
@@ -629,29 +629,29 @@ if valid and household_data is not None and isinstance(household_data, dict):
                 zero_point = pd.DataFrame({'x': [0], 'Households': [0], 'Hover Label': ['$0']})
                 return pd.concat([zero_point, df_year], ignore_index=True)
 
-            value_df_2023 = prepare_value_df(value_df_all, '2023')
+            value_df_2024 = prepare_value_df(value_df_all, '2024')
             value_df_2020 = prepare_value_df(value_df_all, '2020')
 
             value_metrics = household_data.get('housing_value_metrics', {})
-            avg_value = pd.to_numeric(value_metrics.get('average', pd.DataFrame()).query("Year == '2023'")['AvgValue'].values[0], errors='coerce') if 'average' in value_metrics else None
-            med_value = pd.to_numeric(value_metrics.get('median', pd.DataFrame()).query("Year == '2023'")['MedianValue'].values[0], errors='coerce') if 'median' in value_metrics else None
+            avg_value = pd.to_numeric(value_metrics.get('average', pd.DataFrame()).query("Year == '2024'")['AvgValue'].values[0], errors='coerce') if 'average' in value_metrics else None
+            med_value = pd.to_numeric(value_metrics.get('median', pd.DataFrame()).query("Year == '2024'")['MedianValue'].values[0], errors='coerce') if 'median' in value_metrics else None
 
-            value_df_2023['Households'] = pd.to_numeric(value_df_2023['Households'], errors='coerce')
+            value_df_2024['Households'] = pd.to_numeric(value_df_2024['Households'], errors='coerce')
             value_df_2020['Households'] = pd.to_numeric(value_df_2020['Households'], errors='coerce')
-            max_y_val = max(value_df_2023['Households'].max(skipna=True), value_df_2020['Households'].max(skipna=True)) * 1.1
+            max_y_val = max(value_df_2024['Households'].max(skipna=True), value_df_2020['Households'].max(skipna=True)) * 1.1
             max_val_x = 800000
             value_ticks = list(range(0, max_val_x, 100000)) + [800000]
 
             fig_value = go.Figure()
             fig_value.add_trace(go.Scatter(
-                x=value_df_2023['x'],
-                y=value_df_2023['Households'],
+                x=value_df_2024['x'],
+                y=value_df_2024['Households'],
                 fill='tozeroy',
                 mode='lines+markers',
                 line=dict(color='seagreen', shape='spline', smoothing=1.3),
-                name='2023',
-                customdata=value_df_2023['Hover Label'],
-                hovertemplate='2023 Value: %{customdata}<br>Households: %{y:,}<extra></extra>'
+                name='2024',
+                customdata=value_df_2024['Hover Label'],
+                hovertemplate='2024 Value: %{customdata}<br>Households: %{y:,}<extra></extra>'
             ))
             fig_value.add_trace(go.Scatter(
                 x=value_df_2020['x'],
@@ -720,12 +720,12 @@ if valid and household_data is not None and isinstance(household_data, dict):
     avg_value_row = household_data['housing_value_metrics']['median']
 
     if not avg_income_row.empty and not avg_value_row.empty:
-        income_2023 = pd.to_numeric(avg_income_row[avg_income_row['Year'] == '2023']['MedianIncome'].values[0], errors='coerce')
-        value_2023 = pd.to_numeric(avg_value_row[avg_value_row['Year'] == '2023']['MedianValue'].values[0], errors='coerce')
+        income_2024 = pd.to_numeric(avg_income_row[avg_income_row['Year'] == '2024']['MedianIncome'].values[0], errors='coerce')
+        value_2024 = pd.to_numeric(avg_value_row[avg_value_row['Year'] == '2024']['MedianValue'].values[0], errors='coerce')
 
-        if pd.notnull(income_2023) and pd.notnull(value_2023):
-            required_income, _ = calculate_required_income(value_2023, MORTGAGE_RATE)
-            hai = (income_2023 / required_income) * 100
+        if pd.notnull(income_2024) and pd.notnull(value_2024):
+            required_income, _ = calculate_required_income(value_2024, MORTGAGE_RATE)
+            hai = (income_2024 / required_income) * 100
 
             hai_fig = go.Figure()
 
@@ -781,7 +781,7 @@ if valid and household_data is not None and isinstance(household_data, dict):
 
             interpretation_addon = ""
             if required_income_lennar is not None:
-                hai_lennar = (income_2023 / required_income_lennar) * 100
+                hai_lennar = (income_2024 / required_income_lennar) * 100
 
                 hai_fig.add_shape(
                     type="line",
@@ -898,7 +898,7 @@ if valid and household_data is not None and isinstance(household_data, dict):
 
             st.markdown(f"""
             <div style='margin-top: -0.5rem; font-size: 1.05rem; color: #333;'>
-                <strong>Interpretation:</strong> The income required to afford the median home in this market is <strong>${required_income:,.0f}</strong>. However, the median income of the market is actually <strong>${income_2023:,.0f}</strong>. This is <strong>{hai:.1f}%</strong> of the income needed, which gives us a HAI value of <strong>{hai:.1f}</strong>.{interpretation_addon}
+                <strong>Interpretation:</strong> The income required to afford the median home in this market is <strong>${required_income:,.0f}</strong>. However, the median income of the market is actually <strong>${income_2024:,.0f}</strong>. This is <strong>{hai:.1f}%</strong> of the income needed, which gives us a HAI value of <strong>{hai:.1f}</strong>.{interpretation_addon}
             </div>
             """, unsafe_allow_html=True)
 
