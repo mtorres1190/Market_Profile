@@ -859,7 +859,7 @@ if valid and household_data is not None and isinstance(household_data, dict):
                             <ul>
                                 <li>3% Down Payment</li>
                                 <li>30-Year Fixed Mortgage (FHA)</li>
-                                <li>6.75% Interest Rate</li>
+                                <li>3.99% Interest Rate</li>
                                 <li>1.73% Property Tax</li>
                                 <li>0.4% Homeowners Insurance</li>
                                 <li>0.55% Private Mortgage Insurance (PMI)</li>
