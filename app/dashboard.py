@@ -863,7 +863,7 @@ if valid and household_data is not None and isinstance(household_data, dict):
                                 <li>1.73% Property Tax</li>
                                 <li>0.4% Homeowners Insurance</li>
                                 <li>0.55% Private Mortgage Insurance (PMI)</li>
-                                <li>31% Debt-To-Income Limit</li>
+                                <li>31% Front-End DTI Limit</li>
                             </ul>
                         </div>
                     </div>
