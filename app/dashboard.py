@@ -907,5 +907,5 @@ if valid and household_data is not None and isinstance(household_data, dict):
 
 
 # To run the Streamlit App
-# streamlit run "C:\\Users\\MiTorres\\OneDrive - Lennar Azure AD\\Files\\Other Projects\\Demographics\\app\\dashboard.py"
+# streamlit run "C:\\Users\\MiTorres\\OneDrive - Lennar Azure AD\\Files\\Apps\\Demographics\\app\\dashboard.py"
 # https://market-profile.streamlit.app/
